@@ -1,0 +1,57 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/build/test",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
+
+// {
+//   // Use IntelliSense to learn about possible attributes.
+//   // Hover to view descriptions of existing attributes.
+//   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+//   "version": "0.2.0",
+//   "configurations": [
+//       {
+//           "name": "GDB debugging local",
+//           "type": "cppdbg",
+//           "request": "launch",
+//           "program": "${workspaceFolder}/build/bin/lum_gtest",
+//           "args": [
+//               "--gtest_filter=SrcInitialisator.checkECUMode_nok_noECUmode",
+//               "--enable_logs"
+//           ],
+//           "stopAtEntry": false,
+//           "preLaunchTask": "exportLibrary",
+//           "cwd": "${workspaceFolder}",
+//           "envFile": "${workspaceFolder}/build/.env",
+//           "externalConsole": false,
+//           "MIMode": "gdb",
+//           //"command": "REQ_LIBS=$(sed -n '/^\\[libdirs\\]/,/^\\[/p' ${workspaceFolder}/build/conanbuildinfo.txt | sed '1d;$d'); REQ_LIBS=$(echo ${REQ_LIBS} | tr ' ' ':'); echo LD_LIBRARY_PATH=${REQ_LIBS} > ${workspaceFolder}/build/.env",
+//           "setupCommands": [
+//               {
+//                   "description": "Enable pretty-printing for gdb",
+//                   "text": "-enable-pretty-printing",
+//                   "ignoreFailures": true
+//               }
+//           ]
+//       }
+//   ]
+// }

@@ -1,0 +1,4 @@
+/home/sapa4980/work/trainings/2_practice/lotdd-code/code/wav/1/build/CMakeFiles/utest.dir
+/home/sapa4980/work/trainings/2_practice/lotdd-code/code/wav/1/build/CMakeFiles/SnippetPublisher.dir
+/home/sapa4980/work/trainings/2_practice/lotdd-code/code/wav/1/build/CMakeFiles/edit_cache.dir
+/home/sapa4980/work/trainings/2_practice/lotdd-code/code/wav/1/build/CMakeFiles/rebuild_cache.dir
