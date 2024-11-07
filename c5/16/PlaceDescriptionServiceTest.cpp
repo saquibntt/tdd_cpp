@@ -28,7 +28,7 @@ public:
    PlaceDescriptionService_StubHttpService(shared_ptr<HttpStub> httpStub) 
       :PlaceDescriptionService(httpStub), httpStub_{httpStub} {}
    shared_ptr<Http> gethttpService() const override { 
-      std::cout << "************** IN TEST GET *****************\n" << std::endl;
+      std::cout << "*override getter*\n" << std::endl;
       return httpStub_; }
    shared_ptr<Http> httpStub_;
 };
