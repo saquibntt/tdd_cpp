@@ -28,7 +28,7 @@ string PlaceDescriptionService::get(const string& url) const {
 }
 
 shared_ptr<Http> PlaceDescriptionService::httpService() const {
-   std::cout << "************** IN OVERRIDE FACTOR MAKE instance*****************\n" << std::endl;
+   std::cout << "* This method is overriden in unit tests*\n" << std::endl;
    return make_shared<CurlHttp>();
 }
 

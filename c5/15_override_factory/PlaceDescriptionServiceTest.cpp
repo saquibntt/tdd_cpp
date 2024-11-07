@@ -23,7 +23,7 @@ const string APlaceDescriptionService::ValidLatitude("38.005");
 const string APlaceDescriptionService::ValidLongitude("-104.44");
 
 //Override factory
-//Using this stub in the tests, we have to use pass shared pointer and override a protected function to return a stub
+//Using this stub in the tests, we have to pass shared pointer and override a protected function to return a stub
 class PlaceDescriptionService_StubHttpService: public PlaceDescriptionService {
 public:
    PlaceDescriptionService_StubHttpService(shared_ptr<HttpStub> httpStub) 
