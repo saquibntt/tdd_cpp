@@ -1,3 +1,0 @@
-/home/sapa4980/work/trainings/2_practice/lotdd-code/code/c5/16/build/CMakeFiles/test.dir
-/home/sapa4980/work/trainings/2_practice/lotdd-code/code/c5/16/build/CMakeFiles/edit_cache.dir
-/home/sapa4980/work/trainings/2_practice/lotdd-code/code/c5/16/build/CMakeFiles/rebuild_cache.dir
