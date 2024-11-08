@@ -15,21 +15,11 @@
 
 class Http;
 
-class PlaceDescriptionServiceInterface{
-
-virtual std::string summaryDescription(
-      const std::string& latitude, const std::string& longitude) const = 0;
-
-};
-
-class PlaceDescriptionService: PlaceDescriptionServiceInterface
-{
+class PlaceDescriptionService {
 public:
-
-   PlaceDescriptionService(std::shared_ptr<Http>);
-
+   PlaceDescriptionService();
    virtual ~PlaceDescriptionService() {}
-   virtual std::string summaryDescription(
+   std::string summaryDescription(
       const std::string& latitude, const std::string& longitude) const;
 
 private:
@@ -43,14 +33,9 @@ private:
    std::string summaryDescription(const std::string& response) const;
 
    std::shared_ptr<Http> http_;
-   std::string name{""};
-
-   std::shared_ptr<Http> setHttp();
-
-   std::shared_ptr<Http> checkNull(std::shared_ptr<Http> per);
 
 protected:
-   virtual std::shared_ptr<Http> gethttpService() const;
+   virtual std::shared_ptr<Http> httpService() const;
 };
 
 #endif

@@ -4,37 +4,12 @@
 #include "Address.h"
 #include "CurlHttp.h"
 #include <string>
-#include <iostream>
 
 using namespace std;
 
-/// @brief kept code to check some variations///////////
-
-// shared_ptr<Http> PlaceDescriptionService::setHttp()
-// {
-//    std::cout << "************** IN CODE SETHTTP *****************\n" << std::endl;
-//    return make_shared<CurlHttp>();
-    
-// }
-
-// std::shared_ptr<Http> PlaceDescriptionService::checkNull(std::shared_ptr<Http> per)
-// {
-//     if(per == nullptr)
-//     {
-//         throw std::runtime_error("Logic received null persistence object!");
-//     }
-//     return per;
-// }
-
-// PlaceDescriptionService::PlaceDescriptionService(shared_ptr<Http>)
-// : http_{checkNull(setHttp())}
-
-
-PlaceDescriptionService::PlaceDescriptionService(shared_ptr<Http>)
-   : http_{make_shared<CurlHttp>()}
-//...
-
-/////////////////////////////////////////////
+PlaceDescriptionService::PlaceDescriptionService() 
+   : http_{make_shared<CurlHttp>()} {}
+// ...
 
 string PlaceDescriptionService::summaryDescription(
       const string& latitude, const string& longitude) const {
@@ -51,13 +26,14 @@ string PlaceDescriptionService::summaryDescription(
 }
 
 string PlaceDescriptionService::get(const string& url) const {
-   auto http = gethttpService();
+   auto http = httpService();
    http->initialize();
    return http->get(url);
 }
 
-shared_ptr<Http> PlaceDescriptionService::gethttpService() const {
-   std::cout << "*return the already created instance*\n" << std::endl;
+#include <iostream>
+shared_ptr<Http> PlaceDescriptionService::httpService() const {
+   std::cout << "************* return prod http service object ************";
    return http_;
 }
 
@@ -75,4 +51,3 @@ string PlaceDescriptionService::keyValue(
       const string& key, const string& value) const {
    return key + "=" + value;
 }
-
