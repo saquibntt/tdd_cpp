@@ -28,7 +28,7 @@ public:
    PlaceDescriptionService_StubHttpService(shared_ptr<HttpStub> httpStub) 
       :PlaceDescriptionService(httpStub), httpStub_{httpStub} {}
    shared_ptr<Http> gethttpService() const override { 
-      std::cout << "*override getter*\n" << std::endl;
+      std::cout << "************override getter******************\n" << std::endl;
       return httpStub_; }
    shared_ptr<Http> httpStub_;
 };
@@ -95,8 +95,6 @@ TEST_F(APlaceDescriptionService, throwsOnEmptyHttpRequestToObtainAddress) {
    auto expectedURL = urlStart + 
       "lat=" + APlaceDescriptionService::ValidLatitude + "&" +
       "lon=" + APlaceDescriptionService::ValidLongitude;
-   // EXPECT_CALL(*httpStub, initialize());
-   // EXPECT_CALL(*httpStub, get(expectedURL));
    bool exceptionCalled=false;
    try
    {
@@ -109,6 +107,7 @@ TEST_F(APlaceDescriptionService, throwsOnEmptyHttpRequestToObtainAddress) {
         exceptionCalled=true;
     }
    
+      //EXPECT_THROW(PlaceDescriptionService_StubHttpService(nullptr), std::runtime_error);
 
    //service.summaryDescription(ValidLatitude, ValidLongitude);
 }
